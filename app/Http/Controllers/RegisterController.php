@@ -20,6 +20,7 @@ class RegisterController extends Controller
     public function sapa_post(Request $request){
         //dd($request->all());
         $nama = $request["nama"];
-        return "OK post ".$nama;
+        $nama_akhir = $request["nama_akhir"];
+        return "Haloo ".$nama." ".$nama_akhir;
     }
 }

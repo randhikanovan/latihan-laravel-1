@@ -9,6 +9,7 @@
     <form action="/sapa" method="POST">
         @csrf
         <input type="text" name="nama">
+        <input type="text" name="nama_akhir">
         <input type="submit" value="masuk">
     </form>
 </body>

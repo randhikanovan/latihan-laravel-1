@@ -12,10 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('form');
 });
 
-Route::get('/test/{angka}', function ($angka) {
+Route::get('/test/{angka}', function ($angka) { 
     return view('test', ["angka" => $angka]);
 });
 
@@ -27,3 +27,15 @@ Route::get('/form', 'RegisterCOntroller@form');
 
 Route::get('/sapa', 'RegisterCOntroller@sapa');
 Route::post('/sapa', 'RegisterCOntroller@sapa_post');
+
+Route::get('/master', function(){
+    return view('adminlte/master');
+});
+
+Route::get('/items', function(){
+    return view('items.index');
+});
+
+Route::get('/items/create', function(){
+    return view('items.create');
+});
